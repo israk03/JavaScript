@@ -28,6 +28,7 @@ const multiply = (a, b) => {
   return a * b;
 };
 console.log("multiply 5 and 6: " + multiply(5, 6));
+//-----------------------------------------------------------
 
 //--------------> OBJECTS <-----------------
 // basic object
@@ -51,3 +52,25 @@ let person = {
   },
 };
 console.log("Person's full name is: " + person.fullName());
+// -----------------------------------------------------------
+
+//--------------> EVENTS <-----------------
+// click event
+document.getElementById("btn4").onclick = function () {
+  output.innerHTML = "Button 4 Clicked!";
+  console.log("Button 4 Clicked!");
+};
+
+// mouseover ir mouseout event
+
+output.addEventListener("mouseover", function () {
+  output.style.backgroundColor = "lightblue";
+});
+output.addEventListener("mouseout", function () {
+  output.style.backgroundColor = "white";
+});
+
+// input event
+document.getElementById("inputBox").addEventListener("keyup", function (e) {
+  output.innerHTML = "You typed: " + e.target.value;
+});
