@@ -1,5 +1,6 @@
 const output = document.getElementById("output");
 
+// --------------> FUNCTIONS <-----------------
 //basic function
 function greet() {
   output.innerHTML = "HELLO WORLD";
@@ -27,3 +28,26 @@ const multiply = (a, b) => {
   return a * b;
 };
 console.log("multiply 5 and 6: " + multiply(5, 6));
+
+//--------------> OBJECTS <-----------------
+// basic object
+let car = {
+  brand: "AUDI",
+  model: "A6",
+  year: 2023,
+  color: "Red",
+};
+document.getElementById("btn3").onclick = function () {
+  output.innerHTML = `Car Details: ${car.brand} ${car.model}, ${car.year}, ${car.color}`;
+};
+
+// object with method
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
+};
+console.log("Person's full name is: " + person.fullName());
