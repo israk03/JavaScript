@@ -74,3 +74,45 @@ output.addEventListener("mouseout", function () {
 document.getElementById("inputBox").addEventListener("keyup", function (e) {
   output.innerHTML = "You typed: " + e.target.value;
 });
+
+//----------------STRINGS------------------
+
+//quotes + quotes inside
+document.getElementById("btn5").onclick = function () {
+  let str1 = "hello";
+  let str2 = '"JS is fun!"';
+  output.innerHTML = str1 + ", " + str2;
+};
+
+// template string
+document.getElementById("btn6").onclick = function () {
+  let name = "Israk";
+  let age = 22;
+  let msg = `My name is ${name} and I am ${age} years old.`;
+  output.innerHTML = msg;
+};
+
+// string length with escape character
+document.getElementById("btn7").onclick = function () {
+  let text = "Hello\nWorld!";
+  output.innerHTML = `String: ${text} <br> Length: ${text.length}`;
+  console.log(text);
+};
+
+// string methods
+document.getElementById("btn8").onclick = function () {
+  let text = "JavaScript is awesome!";
+  output.innerHTML =
+    `Slice(0,10): ${text.slice(0, 10)} <br` +
+    `Substring(0, 10): &{text.substring(0, 10)} <br>` +
+    `Replace: ${text.replace("awesome", "fun")} <br>` +
+    `Uppercase: ${text.toUpperCase()} <br>` +
+    `Lowercase: ${text.toLowerCase()} <br>` +
+    `Concat: ${text.concat(" Let's code!")} <br>` +
+    `Trim: ${"   Hello World!   ".trim()} <br>` +
+    `PadStart: ${"5".padStart(4, "0")} <br>` +
+    `PadEnd: ${"5".padEnd(4, "0")} <br>` +
+    `CharAt(0): ${text.charAt(0)} <br>` +
+    `CharCodeAt(0): ${text.charCodeAt(0)} <br>` +
+    `Split(' '): ${text.split(" ")} <br>`;
+};
